@@ -6,12 +6,10 @@ class AdditionalInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         SizedBox(
           width: 125,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               SizedBox(height: 5),
               Icon(Icons.water_drop, size: 30),
