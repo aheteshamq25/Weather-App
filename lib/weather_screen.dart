@@ -69,11 +69,31 @@ class WeatherScreen extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  HourlyWeatherForecast(),
-                  HourlyWeatherForecast(),
-                  HourlyWeatherForecast(),
-                  HourlyWeatherForecast(),
-                  HourlyWeatherForecast(),
+                  HourlyWeatherForecast(
+                    time: "06:00",
+                    icon: Icons.cloud,
+                    weather: 'rain',
+                  ),
+                  HourlyWeatherForecast(
+                    time: "08:00",
+                    icon: Icons.sunny,
+                    weather: 'sunny',
+                  ),
+                  HourlyWeatherForecast(
+                    time: "10:00",
+                    icon: Icons.sunny,
+                    weather: 'sunny',
+                  ),
+                  HourlyWeatherForecast(
+                    time: "12:00",
+                    icon: Icons.cloud,
+                    weather: 'rain',
+                  ),
+                  HourlyWeatherForecast(
+                    time: "02:00",
+                    icon: Icons.cloudy_snowing,
+                    weather: 'snow',
+                  ),
                 ],
               ),
             ),
@@ -85,7 +105,23 @@ class WeatherScreen extends StatelessWidget {
             SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [AdditionalInfo(), AdditionalInfo(), AdditionalInfo()],
+              children: [
+                AdditionalInfo(
+                  icon: Icons.water_drop,
+                  label: 'Humidity',
+                  value: '100',
+                ),
+                AdditionalInfo(
+                  icon: Icons.air_outlined,
+                  label: 'Wind Speed',
+                  value: '100',
+                ),
+                AdditionalInfo(
+                  icon: Icons.bubble_chart,
+                  label: 'Pressure',
+                  value: '1000',
+                ),
+              ],
             ),
           ],
         ),

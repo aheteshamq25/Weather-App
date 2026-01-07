@@ -1,27 +1,35 @@
 import 'package:flutter/material.dart';
 
 class HourlyWeatherForecast extends StatelessWidget {
-  const HourlyWeatherForecast({super.key});
+  final String time;
+  final IconData icon;
+  final String weather;
+  const HourlyWeatherForecast({
+    super.key,
+    required this.time,
+    required this.icon,
+    required this.weather,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
+    return SizedBox(
       width: 110,
       child: Card(
         elevation: 10,
         shadowColor: Colors.black,
         child: Column(
           children: [
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Text(
-              '03:00',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              time,
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ),
-            SizedBox(height: 5),
-            Icon(Icons.cloud, size: 50),
-            SizedBox(height: 5),
-            Text('Rain'),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
+            Icon(icon, size: 50),
+            const SizedBox(height: 5),
+            Text(weather),
+            const SizedBox(height: 5),
           ],
         ),
       ),
